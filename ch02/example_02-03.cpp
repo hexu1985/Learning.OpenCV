@@ -5,7 +5,8 @@
 #include <iostream>
 
 using namespace std;
-void help(char** argv ) {
+void help(char** argv ) 
+{
     std::cout << "\n"
         << "2-03: play video from disk \n"
         << argv[0] <<" <path/video>\n"
@@ -13,7 +14,6 @@ void help(char** argv ) {
         << argv[0] << " ../tree.avi\n"
         << std::endl;
 }
-
 
 int main( int argc, char** argv ) 
 {
@@ -25,20 +25,15 @@ int main( int argc, char** argv )
     cv::namedWindow( "Example 2-3", cv::WINDOW_AUTOSIZE );
 
     cv::VideoCapture cap;
-
     cap.open( string(argv[1]) );
     cout <<"Opened file: " <<argv[1] <<endl;
 
     cv::Mat frame;
-
     for(;;) {
-
         cap >> frame;
-
         if( frame.empty() ) break; // Ran out of film
 
         cv::imshow( "Example 2-3", frame );
-
         if( (char)cv::waitKey(33) >= 0 ) break;
 
         //    int c = cv::waitKey(33);
@@ -50,9 +45,7 @@ int main( int argc, char** argv )
         //    if( (signed char)c >= 0 ) {
         //      break;
         //    }
-
     }
 
     return 0;
-
 }

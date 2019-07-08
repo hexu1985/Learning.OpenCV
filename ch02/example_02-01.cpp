@@ -2,7 +2,8 @@
 //on the screen
 #include <opencv2/opencv.hpp>
 
-void help(char** argv ) {
+void help(char** argv ) 
+{
     std::cout << "\n"
         << "A simple OpenCV program that loads and displays an image from disk\n"
         << argv[0] <<" <path/filename>\n"
@@ -12,13 +13,12 @@ void help(char** argv ) {
 }
 
 
-int main( int argc, char** argv ) {
-
+int main( int argc, char** argv ) 
+{
     if (argc != 2) {
         help(argv);
         return 0;
     }
-
 
     cv::Mat img = cv::imread( argv[1], -1 );
 
