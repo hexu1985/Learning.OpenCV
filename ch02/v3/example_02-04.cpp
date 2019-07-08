@@ -80,7 +80,7 @@ int main( int argc, char** argv )
             cout << "Run mode, run = " << g_run <<endl;
         }
 
-        if( c == 27 ) break;
+        if( c == 27 ) break; // Esc key 
     }
 
     return(0);
