@@ -1,3 +1,5 @@
 学习OpenCV3
 Learning OpenCV 3: Computer Vision in C++ with the OpenCV Library
 示例代码
+
+# windows: msys2下通过pacman -Ss opencv搜索opencv库, 并通过pacman -S 安装
