@@ -10,7 +10,7 @@ LDPATH =
 ifeq ($(OS), Windows_NT)
 	CXXFLAGS = -Wall -g 
 	INCLUDES = "-I/mingw64/include/opencv4"
-	LDFLAGS = -lopencv_imgcodecs -lopencv_core -lopencv_imgproc -lopencv_highgui
+	LDFLAGS = -lopencv_imgcodecs -lopencv_core -lopencv_imgproc -lopencv_highgui -lopencv_video -lopencv_videoio
 	LDPATH = "-L/mingw64/lib"
 endif
 
