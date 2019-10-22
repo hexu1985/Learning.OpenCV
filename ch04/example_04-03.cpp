@@ -2,6 +2,8 @@
 
 #include <opencv2/opencv.hpp>
 #include <iostream>
+#include <cstdlib>
+#include <cstdio>
 
 // Printing all of the nonzero elements of a sparse array
 //
@@ -20,8 +22,8 @@ int main( int argc, char** argv ) {
   cv::SparseMat sm( 2, size, CV_32F );
   for( int i=0; i<10; i++ ) { // Fill the array
     int idx[2];
-    idx[0] = size[0] * rand();
-    idx[1] = size[1] * rand();
+    idx[0] = size[0] * (rand()/((double) RAND_MAX + 1));
+    idx[1] = size[1] * (rand()/((double) RAND_MAX + 1));
     sm.ref<float>( idx ) += 1.0f;
   }
 
