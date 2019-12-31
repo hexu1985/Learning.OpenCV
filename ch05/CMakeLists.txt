@@ -12,7 +12,7 @@ if ( OpenCV_FOUND )
 	message(STATUS "Found opencv with version: " ${OpenCV_VERSION})
 else()
 	message(STATUS "Not found opencv ")
-endif ()
+Endif ()
 
 include_directories( ${OpenCV_INCLUDE_DIRS} )
 
@@ -25,17 +25,10 @@ include_directories( ${OpenCV_INCLUDE_DIRS} )
 ###############
 
 # COMPILE EXAMPLES
-add_executable( rng_fill_01 rng_fill_01.cpp )
-add_executable( mat_foreach_01 mat_foreach_01.cpp )
-add_executable( mat_attributes_01 mat_attributes_01.cpp )
-add_executable( mat_get_type mat_get_type.cpp )
+add_executable( example_05-01 example_05-01.cpp )
 
 ################
 ###   LINK   ###
 ################
 # FIRST LINK EXAMPLES:
-target_link_libraries( rng_fill_01 ${OpenCV_LIBS} )
-target_link_libraries( mat_foreach_01 ${OpenCV_LIBS} )
-target_link_libraries( mat_attributes_01 ${OpenCV_LIBS} )
-target_link_libraries( mat_get_type ${OpenCV_LIBS} )
-
+target_link_libraries( example_05-01 ${OpenCV_LIBS} )
