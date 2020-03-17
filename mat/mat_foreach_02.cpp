@@ -25,7 +25,12 @@ int main()
     std::vector<float> f_array;
     int n = rows*cols;
     for (int i = 0; i < n; i++)
-        f_array.push_back(i);
+        f_array.push_back(i+0.1);
+
+    cout << "f_array: ";
+    for (int i = 0; i < n; i++)
+        cout << f_array[i] << ", ";
+    cout << "\n";
 
 	mat.forEach<uint16_t>(Operator{f_array.data(), cols});
 
